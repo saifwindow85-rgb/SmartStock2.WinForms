@@ -14,9 +14,11 @@ namespace SmartStock.WinForms.loginScreen
 {
     public partial class frmLogin : Form
     {
-        public frmLogin()
+        private readonly ClsCurrentUser _CurrentUser;
+        public frmLogin(ClsCurrentUser User)
         {
             InitializeComponent();
+            _CurrentUser = User;
         }
 
 
@@ -31,9 +33,10 @@ namespace SmartStock.WinForms.loginScreen
                 txtUserName.Focus();
                 return;
             }
-            
-            frmMain frm = new frmMain();
-            frm.ShowDialog();
+            _CurrentUser.LogIn(User);
+            frmMain frm = new frmMain(_CurrentUser);
+            this.Hide();
+            frm.Show();
         }
 
 

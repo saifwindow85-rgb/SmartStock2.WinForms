@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmartStock.BusinessLayer.Global_Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace SmartStock.WinForms
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        public frmMain(ClsCurrentUser User)
         {
             InitializeComponent();
         }
