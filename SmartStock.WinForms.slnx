@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="ClsHelpperClasses/ClsHelpperClasses.csproj" Id="23b61f8b-0569-4b1a-8a41-acc19b3360f5" />
+  <Project Path="SmartStock.BusinessLayer/SmartStock.BusinessLayer.csproj" Id="f7a24556-f4a5-4cae-9bd2-af891f460674" />
+  <Project Path="SmartStock.DataLayer/SmartStock.DataLayer.csproj" Id="26dcb75d-cc3f-481b-98b4-79fb695b7eef" />
+  <Project Path="SmartStock.WinForms/SmartStock.WinForms.csproj" Id="0fdb06ba-8695-4679-aa1e-732bf8682f3a" />
+</Solution>
