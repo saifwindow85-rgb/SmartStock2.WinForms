@@ -29,7 +29,7 @@ namespace SmartStock.DataLayer
                         {
                             JobID = (int)Reader["JobID"],
                             JobTitle = (string)Reader["JobTitle"],
-                            JobDescription = Reader["Description"] as string
+                            JobDescription = Reader["JobDescription"] as string
                         };
                     }
                 }

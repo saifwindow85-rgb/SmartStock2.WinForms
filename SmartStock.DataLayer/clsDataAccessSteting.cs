@@ -9,6 +9,6 @@ namespace SmartStock.DataLayer
     public class ClsDataAccessSettings
     {
         public static string ConnectionString =
-        "Server=localhost;Database=DVLD;User Id=sa;Password=sa123456;\r\n;";
+        "Server=localhost;Database=SmartStock2;User Id=sa;Password=sa123456;\r\n;";
     }
 }
