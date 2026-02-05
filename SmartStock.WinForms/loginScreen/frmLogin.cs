@@ -1,4 +1,5 @@
 ﻿using SmartStock.BusinessLayer;
+using SmartStock.BusinessLayer.Global_Objects;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,8 +28,10 @@ namespace SmartStock.WinForms.loginScreen
             if(User == null)
             {
                 MessageBox.Show("Invalid UserName/Password", "Logging Faield", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtUserName.Focus();
                 return;
             }
+            
             frmMain frm = new frmMain();
             frm.ShowDialog();
         }
@@ -68,6 +71,30 @@ namespace SmartStock.WinForms.loginScreen
             else
             {
                 errorProvider1.SetError(txtPassword, null);
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            txtUserName.Focus();
+
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Focus();
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                e.SuppressKeyPress = true;
             }
         }
     }
