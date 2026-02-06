@@ -44,7 +44,7 @@
     <Compile Include="clsCountry.cs" />
     <Compile Include="ClsEmployee.cs" />
     <Compile Include="ClsJob.cs" />
-    <Compile Include="ClsPeople.cs" />
+    <Compile Include="ClsPerson.cs" />
     <Compile Include="ClsUser.cs" />
     <Compile Include="Global Objects\ClsCurrentUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

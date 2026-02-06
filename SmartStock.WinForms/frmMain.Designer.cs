@@ -36,12 +36,13 @@
             this.lkNonAvalibelQuantites = new System.Windows.Forms.LinkLabel();
             this.lkemployeesmangement = new System.Windows.Forms.LinkLabel();
             this.lkusersmanagement = new System.Windows.Forms.LinkLabel();
+            this.lkPeopleManagment = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lkInventoryexchangeorder
             // 
             this.lkInventoryexchangeorder.AutoSize = true;
-            this.lkInventoryexchangeorder.Location = new System.Drawing.Point(39, 242);
+            this.lkInventoryexchangeorder.Location = new System.Drawing.Point(46, 201);
             this.lkInventoryexchangeorder.Name = "lkInventoryexchangeorder";
             this.lkInventoryexchangeorder.Size = new System.Drawing.Size(149, 25);
             this.lkInventoryexchangeorder.TabIndex = 0;
@@ -51,7 +52,7 @@
             // Purchasesinvoice
             // 
             this.Purchasesinvoice.AutoSize = true;
-            this.Purchasesinvoice.Location = new System.Drawing.Point(39, 156);
+            this.Purchasesinvoice.Location = new System.Drawing.Point(73, 115);
             this.Purchasesinvoice.Name = "Purchasesinvoice";
             this.Purchasesinvoice.Size = new System.Drawing.Size(122, 25);
             this.Purchasesinvoice.TabIndex = 1;
@@ -61,7 +62,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(39, 196);
+            this.linkLabel1.Location = new System.Drawing.Point(86, 155);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(109, 25);
             this.linkLabel1.TabIndex = 2;
@@ -71,7 +72,7 @@
             // WarehouseSupplyOrder
             // 
             this.WarehouseSupplyOrder.AutoSize = true;
-            this.WarehouseSupplyOrder.Location = new System.Drawing.Point(39, 291);
+            this.WarehouseSupplyOrder.Location = new System.Drawing.Point(54, 250);
             this.WarehouseSupplyOrder.Name = "WarehouseSupplyOrder";
             this.WarehouseSupplyOrder.Size = new System.Drawing.Size(141, 25);
             this.WarehouseSupplyOrder.TabIndex = 3;
@@ -81,7 +82,7 @@
             // lkProductsDetails
             // 
             this.lkProductsDetails.AutoSize = true;
-            this.lkProductsDetails.Location = new System.Drawing.Point(39, 348);
+            this.lkProductsDetails.Location = new System.Drawing.Point(81, 307);
             this.lkProductsDetails.Name = "lkProductsDetails";
             this.lkProductsDetails.Size = new System.Drawing.Size(114, 25);
             this.lkProductsDetails.TabIndex = 4;
@@ -91,7 +92,7 @@
             // lkNonAvalibelQuantites
             // 
             this.lkNonAvalibelQuantites.AutoSize = true;
-            this.lkNonAvalibelQuantites.Location = new System.Drawing.Point(39, 398);
+            this.lkNonAvalibelQuantites.Location = new System.Drawing.Point(7, 357);
             this.lkNonAvalibelQuantites.Name = "lkNonAvalibelQuantites";
             this.lkNonAvalibelQuantites.Size = new System.Drawing.Size(188, 25);
             this.lkNonAvalibelQuantites.TabIndex = 5;
@@ -101,7 +102,7 @@
             // lkemployeesmangement
             // 
             this.lkemployeesmangement.AutoSize = true;
-            this.lkemployeesmangement.Location = new System.Drawing.Point(39, 444);
+            this.lkemployeesmangement.Location = new System.Drawing.Point(90, 403);
             this.lkemployeesmangement.Name = "lkemployeesmangement";
             this.lkemployeesmangement.Size = new System.Drawing.Size(105, 25);
             this.lkemployeesmangement.TabIndex = 6;
@@ -111,12 +112,22 @@
             // lkusersmanagement
             // 
             this.lkusersmanagement.AutoSize = true;
-            this.lkusersmanagement.Location = new System.Drawing.Point(39, 488);
+            this.lkusersmanagement.Location = new System.Drawing.Point(73, 447);
             this.lkusersmanagement.Name = "lkusersmanagement";
             this.lkusersmanagement.Size = new System.Drawing.Size(122, 25);
             this.lkusersmanagement.TabIndex = 7;
             this.lkusersmanagement.TabStop = true;
             this.lkusersmanagement.Text = "أدارة المستخدمين";
+            // 
+            // lkPeopleManagment
+            // 
+            this.lkPeopleManagment.AutoSize = true;
+            this.lkPeopleManagment.Location = new System.Drawing.Point(119, 501);
+            this.lkPeopleManagment.Name = "lkPeopleManagment";
+            this.lkPeopleManagment.Size = new System.Drawing.Size(76, 25);
+            this.lkPeopleManagment.TabIndex = 8;
+            this.lkPeopleManagment.TabStop = true;
+            this.lkPeopleManagment.Text = "الأشخاص";
             // 
             // frmMain
             // 
@@ -124,6 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(728, 708);
+            this.Controls.Add(this.lkPeopleManagment);
             this.Controls.Add(this.lkusersmanagement);
             this.Controls.Add(this.lkemployeesmangement);
             this.Controls.Add(this.lkNonAvalibelQuantites);
@@ -153,6 +165,7 @@
         private System.Windows.Forms.LinkLabel lkNonAvalibelQuantites;
         private System.Windows.Forms.LinkLabel lkemployeesmangement;
         private System.Windows.Forms.LinkLabel lkusersmanagement;
+        private System.Windows.Forms.LinkLabel lkPeopleManagment;
     }
 }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SmartStock.BusinessLayer
 {
-    public class ClsPeople
+    public class ClsPerson
     {
         public enum enMood { Add = 0, Update = 1 }
         private enMood _Mood = enMood.Add;
@@ -24,7 +24,7 @@ namespace SmartStock.BusinessLayer
         public int CountryID { get; set; }
         public clsCountry CountryInfo;
 
-        public ClsPeople()
+        public ClsPerson()
         {
             this.PersonID = -1;
             this.Gender = null;
@@ -38,7 +38,7 @@ namespace SmartStock.BusinessLayer
             _Mood = enMood.Add;
         }
 
-        public ClsPeople(int PersonID,string FirstName,string SecondName,string ThirdName , string LastName,DateTime DateOfBirth,
+        public ClsPerson(int PersonID,string FirstName,string SecondName,string ThirdName , string LastName,DateTime DateOfBirth,
              string Email,string Phone,int CountryID,byte?Gender)
         {
             this.PersonID = PersonID;
@@ -89,13 +89,13 @@ namespace SmartStock.BusinessLayer
         }
 
 
-        public static ClsPeople FindPersonByID(int PersonID)
+        public static ClsPerson FindPersonByID(int PersonID)
         {
             var DtoPeople = ClsPeopleData.FindPersonByID(PersonID);
             if (DtoPeople == null)
                 return null;
 
-            return new ClsPeople(DtoPeople.PersonID, DtoPeople.FirstName, DtoPeople.SecondName, DtoPeople.ThirdName
+            return new ClsPerson(DtoPeople.PersonID, DtoPeople.FirstName, DtoPeople.SecondName, DtoPeople.ThirdName
                 , DtoPeople.LastName, DtoPeople.DateOfBirth, DtoPeople.Email, DtoPeople.Phone, DtoPeople.CountryID,DtoPeople.Gender);
         }
 

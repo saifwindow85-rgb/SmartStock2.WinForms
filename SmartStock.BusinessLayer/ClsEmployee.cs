@@ -23,7 +23,7 @@ namespace SmartStock.BusinessLayer
         public int JobID { get; set; } 
         ClsJob JobInfo { get; set; }
         public int PersonID { get; set; }
-        public ClsPeople PersonInfo;
+        public ClsPerson PersonInfo;
 
         public ClsEmployee()
         {
@@ -47,7 +47,7 @@ namespace SmartStock.BusinessLayer
             this.JobID =JobID;
             this.JobInfo = ClsJob.FindJobInfo(JobID);
             this.PersonID =PersonID;
-            this.PersonInfo = ClsPeople.FindPersonByID(PersonID);
+            this.PersonInfo = ClsPerson.FindPersonByID(PersonID);
             _Mood = enMood.Update;
         }
 
@@ -60,6 +60,28 @@ namespace SmartStock.BusinessLayer
         private bool _Update()
         {
             return ClsEmployeesData.UpDateEmployee(this.EmployeeID, this.Salary, this.CreatedByEmployeeID, this.ManagerID, this.JobID, this.PersonID);
+        }
+
+        public bool Save()
+        {
+            switch(_Mood)
+            {
+                case enMood.Add:
+                    {
+                        if (_AddNew())
+                        {
+                            _Mood = enMood.Update;
+                            return true;
+                        }
+                        else
+                            return false;
+                    }
+
+                case enMood.Update:
+                    return _Update();
+
+            }
+            return false;
         }
 
         public bool Delete()
@@ -87,5 +109,7 @@ namespace SmartStock.BusinessLayer
         {
             return ClsEmployeesData.GetAllEmployeesInfo();
         }
+
+       
     }
 }
