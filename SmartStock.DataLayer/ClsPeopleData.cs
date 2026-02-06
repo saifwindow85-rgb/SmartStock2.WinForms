@@ -146,8 +146,18 @@ namespace SmartStock.DataLayer
             DataTable dtPeople = new DataTable();
             using (SqlConnection Connection = new SqlConnection(ClsDataAccessSettings.ConnectionString))
             {
+                string Query =
+                    "SELECT PersonID, " +
+                    "LTRIM(RTRIM(CONCAT(FirstName,' ',SecondName,' ',ThirdName,' ',LastName))) AS FullName, " +
+                    "CASE " +
+                    "   WHEN Gender = 1 THEN 'Male' " +
+                    "   WHEN Gender = 0 THEN 'Female' " +
+                    "   ELSE 'Unknown' " +
+                    "END AS Gender, " +
+                    "DateOfBirth, Email, Phone, Countries.CountryName " +
+                    "FROM People " +
+                    "INNER JOIN Countries ON People.CountryID = Countries.CountryID";
 
-                string Query = "Select PersonID,FirstName,SecondName,ThirdName,LastName,DateOfBirth,Email,Phone,CountryID From People";
                 using (SqlCommand CMD = new SqlCommand(Query, Connection))
                 {
                     Connection.Open();
